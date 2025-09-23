@@ -1,0 +1,17 @@
+{
+    "name": "zsft",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "description": "ZSFT CLI 是 ZSFT 所使用的命令行工具，通过快速简单的命令来对字体文件进行子集化、转换和拆分。",
+    "author": "ZeoSeven",
+    "license": "MIT",
+    "bin": {
+        "zsft": "index.js"
+    },
+    "dependencies": {
+        "@web-alchemy/fonttools": "1.3.4",
+        "cn-font-split": "7.2.9",
+        "commander": "14.0.1"
+    }
+}
