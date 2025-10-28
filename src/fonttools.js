@@ -13,7 +13,7 @@ export const FONT_TOOLS_EX = async (config) => {
     const { file, target, text, min } = config;
 
     const INPUT_FILE = file || "./main.ttf";
-    const OUTPUT_FILE = target || "./main.woff2";
+    const OUTPUT_FILE = target || `./${INPUT_FILE.substring((INPUT_FILE.lastIndexOf("/")) + 1, (INPUT_FILE.lastIndexOf(".")))}.woff2`;
     const SUBSET_TEXT = text ? text : (
         min ? CONFIG_JSON.defaultSubset || "全世界无产者联合起来，。！？ AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890,.!?:;-" : false
     );
@@ -41,7 +41,7 @@ export const FONT_TOOLS_EX = async (config) => {
 
     await fs.promises.writeFile(OUTPUT_FILE, outputFileBuffer);
 
-    console.log(`✅ ${INPUT_FILE.toLowerCase()} to ${OUTPUT_FILE.toLowerCase()}. ${((Date.now() - START_TIME) / 1000).toFixed(1)}s`);
+    console.log(`✨ ${INPUT_FILE.toLowerCase()} to ${OUTPUT_FILE.toLowerCase()} in ${((Date.now() - START_TIME) / 1000).toFixed(1)}s`);
     console.log("");
     return;
 

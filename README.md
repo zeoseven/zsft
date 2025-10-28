@@ -18,6 +18,8 @@ npm install -g zsft
 
 可以执行 `npm root -g` 获取全局模块安装目录的位置。
 
+> 当重新安装或更新 ZSFT CLI 时，原 `config.json` 文件会被覆盖，请注意保留副本。
+
 ## ✨ 基础命令
 
 ### 帮助
@@ -41,7 +43,13 @@ zsft
 指定输入和输出
 
 ```bash
-zsft ./main.ttf ./main.woff
+zsft ./myfont.ttf ./myfont.woff
+```
+
+仅指定输入：自动转换到 `.woff2`，同时输入名称即输出名称
+
+```bash
+zsft ./myfont.ttf
 ```
 
 ### 子集化
@@ -62,6 +70,12 @@ zsft ./main.ttf ./main.woff2 --text "Hello World"
 
 ```bash
 zsft -m
+```
+
+仅指定输入：自动转换到 `.woff2`，同时输入名称即输出名称
+
+```bash
+zsft -m ./myfont.ttf
 ```
 
 ### 拆分
