@@ -1,9 +1,23 @@
 {
     "name": "zsft",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "main": "index.js",
     "type": "module",
     "description": "ZSFT CLI 是 ZSFT 所使用的命令行工具，通过快速简单的命令来对字体文件进行子集化、转换和拆分，为 Web 优化。",
+    "keywords": [
+        "font",
+        "cli",
+        "tool",
+        "chinese-font",
+        "font-split",
+        "fonttools",
+        "webfont"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zeoseven/zsft"
+    },
+    "homepage": "https://github.com/zeoseven/zsft",
     "author": "ZeoSeven",
     "license": "MIT",
     "bin": {

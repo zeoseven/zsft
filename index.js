@@ -3,9 +3,16 @@
 import { Command } from "commander";
 import { FONT_TOOLS_EX } from "./src/fonttools.js";
 import { CN_FONT_SPLIT_EX } from "./src/cn-font-split.js";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 console.log("");
-console.log("\x1b[44m\x1b[37m%s\x1b[0m", `    ZSFT CLI    `);
+console.log("\x1b[44m\x1b[37m%s\x1b[0m", `    ZSFT CLI - ${JSON.parse(fs.readFileSync(path.join(__dirname, './package.json'), 'utf8')).version}    `);
 console.log("");
 
 const program = new Command();
