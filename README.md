@@ -95,3 +95,7 @@ zsft split ./myfont.ttf
 ## 📜 许可证
 
 MIT © ZeoSeven
+
+## 📑 更新日志
+
+更新日志可以在 `/changelog.md` 找到，并已包含在 NPM 包中。
